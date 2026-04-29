@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply font-inter;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background-50 text-text-primary;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-primary-500 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-primary-600 hover:shadow-soft-lg active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-secondary-500 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-secondary-600 hover:shadow-soft-lg active:scale-95;
+  }
+
+  .btn-accent {
+    @apply px-6 py-3 bg-accent-500 text-primary-500 font-semibold rounded-lg transition-all duration-300 hover:bg-accent-600 hover:shadow-soft-lg active:scale-95;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-primary-500 text-primary-500 font-semibold rounded-lg transition-all duration-300 hover:bg-primary-500 hover:text-white hover:shadow-soft-lg active:scale-95;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-soft p-6 transition-all duration-300 hover:shadow-soft-lg;
+  }
+
+  .card-hover {
+    @apply card hover:scale-105 hover:shadow-soft-xl;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-200 rounded-lg font-inter text-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-primary-500 mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-gray-600 mb-12;
+  }
+
+  .badge {
+    @apply inline-block px-4 py-2 rounded-full text-sm font-semibold;
+  }
+
+  .badge-success {
+    @apply badge bg-green-100 text-success;
+  }
+
+  .badge-warning {
+    @apply badge bg-yellow-100 text-warning;
+  }
+
+  .badge-danger {
+    @apply badge bg-red-100 text-danger;
+  }
+
+  .glass {
+    @apply bg-white/50 backdrop-blur-sm border border-white/20;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full transition-colors duration-300 hover:bg-gray-400;
+}
